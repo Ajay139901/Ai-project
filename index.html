@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>easy.AI - Next-Generation AI Solutions</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- The glowing border around the page (Fixed HUD) -->
+    <div class="page-border"></div>
+
+    <!-- Background Spline Placeholder (Fixed Background) -->
+    <!-- 
+        When ready to add your Spline model:
+        1. Add this script in the <head>:
+           <script type="module" src="https://unpkg.com/@splinetool/viewer@1.0.94/build/spline-viewer.js"></script>
+        2. Inside the .spline-container below, remove the .prism-placeholder element (and optionally the glows).
+        3. Add your spline viewer like this:
+           <spline-viewer url="YOUR_SCENE_URL"></spline-viewer>
+    -->
+    <div class="spline-container">
+        <!-- Ambient background gradients -->
+        <div class="ambient-glow glow-left"></div>
+        <div class="ambient-glow glow-right"></div>
+        
+        <!-- Placeholder for the prism effect is removed, 3D Canvas added -->
+        <canvas id="canvas3d"></canvas>
+    </div>
+
+    <div class="content-wrapper">
+        <header>
+            <div class="logo">easy<span class="logo-accent">.AI</span></div>
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#testimonials">Testimonials</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <a href="#contact" class="btn btn-gradient btn-sm" style="text-decoration: none;">Get Started</a>
+        </header>
+
+        <main>
+            <!-- HERO SECTION -->
+            <section class="hero-section" id="home">
+                <div class="hero">
+                    <span class="eyebrow">NEXT-GENERATION AI SOLUTIONS AGENCY</span>
+                    <h1 class="hero-title">Intelligence <svg class="hero-star" width="70" height="70" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C12 6.62742 17.3726 12 24 12C17.3726 12 12 17.3726 12 24C12 17.3726 6.62742 12 0 12C6.62742 12 12 6.62742 12 0Z" fill="white"/></svg><br><span class="hero-gold">Without Limits</span></h1>
+                    <p class="hero-subtitle">We design, build, and deploy custom AI solutions that transform the way your business operates &mdash; from intelligent automation to predictive analytics.</p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-gradient" style="text-decoration: none; display: inline-flex; align-items: center;">Book a Consultation &rarr;</a>
+                        <a href="#services" class="btn btn-outline" style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center;">Explore Services</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TESTIMONIALS SECTION -->
+            <section class="testimonials-section" id="testimonials">
+                <div class="section-header">
+                    <span class="eyebrow gradient-text">TESTIMONIALS</span>
+                    <h2>What our <span class="hero-gold">users say</span></h2>
+                    <p>Discover how thousands of teams streamline their operations with our platform.</p>
+                </div>
+
+                <div class="testimonials-container">
+                    <!-- Column 1 -->
+                    <div class="testimonials-column">
+                        <div class="testimonials-track track-1">
+                            <div class="testimonial-card">
+                                <p>"This ERP revolutionized our operations, streamlining finance and inventory. The cloud-based platform keeps us productive, even remotely."</p>
+                                <div class="testimonial-author">
+                                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=150&h=150" alt="Briana Patton">
+                                    <div class="author-info">
+                                        <h4>Briana Patton</h4>
+                                        <span>Operations Manager</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-card">
+                                <p>"Implementing this ERP was smooth and quick. The customizable, user-friendly interface made team training effortless."</p>
+                                <div class="testimonial-author">
+                                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=150&h=150" alt="Bilal Ahmed">
+                                    <div class="author-info">
+                                        <h4>Bilal Ahmed</h4>
+                                        <span>IT Manager</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-card">
+                                <p>"The support team is exceptional, guiding us through setup and providing ongoing assistance, ensuring our satisfaction."</p>
+                                <div class="testimonial-author">
+                                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=150&h=150" alt="Saman Malik">
+                                    <div class="author-info">
+                                        <h4>Saman Malik</h4>
+                                        <span>Customer Support Lead</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Duplicated for infinite scroll -->
+                            <div class="testimonial-card">
+                                <p>"This ERP revolutionized our operations, streamlining finance and inventory. The cloud-based platform keeps us productive, even remotely."</p>
+                                <div class="testimonial-author">
+                                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=150&h=150" alt="Briana Patton">
+                                    <div class="author-info">
+                                        <h4>Briana Patton</h4>
+                                        <span>Operations Manager</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-card">
+                                <p>"Implementing this ERP was smooth and quick. The customizable, user-friendly interface made team training effortless."</p>
+                                <div class="testimonial-author">
+                                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=150&h=150" alt="Bilal Ahmed">
+                                    <div class="author-info">
+                                        <h4>Bilal Ahmed</h4>
+                                        <span>IT Manager</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-card">
+                                <p>"The support team is exceptional, guiding us through setup and providing ongoing assistance, ensuring our satisfaction."</p>
+                                <div class="testimonial-author">
+                                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=150&h=150" alt="Saman Malik">
+                                    <div class="author-info">
+                                        <h4>Saman Malik</h4>
+                                        <span>Customer Support Lead</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Column 2 -->
+                    <div class="testimonials-column hidden-mobile">
+                        <div class="testimonials-track track-2">
+                            <div class="testimonial-card">
+                                <p>"This ERP's seamless integration enhanced our business operations and efficiency. Highly recommend for its intuitive interface."</p>
+                                <div class="testimonial-author">
+                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=150&h=150" alt="Omar Raza">
+                                    <div class="author-info">
+                                        <h4>Omar Raza</h4>
+                                        <span>CEO</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-card">
+                                <p>"Its robust features and quick support have transformed our workflow, making us significantly more efficient."</p>
+                                <div class="testimonial-author">
+                                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=150&h=150" alt="Zainab Hussain">
+                                    <div class="author-info">
+                                        <h4>Zainab Hussain</h4>
+                                        <span>Project Manager</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-card">
+                                <p>"The smooth implementation exceeded expectations. It streamlined processes, improving overall business performance."</p>
+                                <div class="testimonial-author">
+                                    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&q=80&w=150&h=150" alt="Aliza Khan">
+                                    <div class="author-info">
+                                        <h4>Aliza Khan</h4>
+                                        <span>Business Analyst</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Duplicated for infinite scroll -->
+                            <div class="testimonial-card">
+                                <p>"This ERP's seamless integration enhanced our business operations and efficiency. Highly recommend for its intuitive interface."</p>
+                                <div class="testimonial-author">
+                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=150&h=150" alt="Omar Raza">
+                                    <div class="author-info">
+                                        <h4>Omar Raza</h4>
+                                        <span>CEO</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-card">
+                                <p>"Its robust features and quick support have transformed our workflow, making us significantly more efficient."</p>
+                                <div class="testimonial-author">
+                                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=150&h=150" alt="Zainab Hussain">
+                                    <div class="author-info">
+                                        <h4>Zainab Hussain</h4>
+                                        <span>Project Manager</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-card">
+                                <p>"The smooth implementation exceeded expectations. It streamlined processes, improving overall business performance."</p>
+                                <div class="testimonial-author">
+                                    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&q=80&w=150&h=150" alt="Aliza Khan">
+                                    <div class="author-info">
+                                        <h4>Aliza Khan</h4>
+                                        <span>Business Analyst</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Column 3 -->
+                    <div class="testimonials-column hidden-tablet">
+                        <div class="testimonials-track track-3">
+                            <div class="testimonial-card">
+                                <p>"Our business functions improved with a user-friendly design and positive customer feedback."</p>
+                                <div class="testimonial-author">
+                                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=150&h=150" alt="Farhan Siddiqui">
+                                    <div class="author-info">
+                                        <h4>Farhan Siddiqui</h4>
+                                        <span>Marketing Director</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-card">
+                                <p>"They delivered a solution that exceeded expectations, understanding our needs and enhancing our operations."</p>
+                                <div class="testimonial-author">
+                                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=150&h=150" alt="Sana Sheikh">
+                                    <div class="author-info">
+                                        <h4>Sana Sheikh</h4>
+                                        <span>Sales Manager</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-card">
+                                <p>"Using this ERP, our online presence and conversions significantly improved, boosting business performance."</p>
+                                <div class="testimonial-author">
+                                    <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=150&h=150" alt="Hassan Ali">
+                                    <div class="author-info">
+                                        <h4>Hassan Ali</h4>
+                                        <span>E-commerce Manager</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Duplicated for infinite scroll -->
+                            <div class="testimonial-card">
+                                <p>"Our business functions improved with a user-friendly design and positive customer feedback."</p>
+                                <div class="testimonial-author">
+                                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=150&h=150" alt="Farhan Siddiqui">
+                                    <div class="author-info">
+                                        <h4>Farhan Siddiqui</h4>
+                                        <span>Marketing Director</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-card">
+                                <p>"They delivered a solution that exceeded expectations, understanding our needs and enhancing our operations."</p>
+                                <div class="testimonial-author">
+                                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=150&h=150" alt="Sana Sheikh">
+                                    <div class="author-info">
+                                        <h4>Sana Sheikh</h4>
+                                        <span>Sales Manager</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-card">
+                                <p>"Using this ERP, our online presence and conversions significantly improved, boosting business performance."</p>
+                                <div class="testimonial-author">
+                                    <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=150&h=150" alt="Hassan Ali">
+                                    <div class="author-info">
+                                        <h4>Hassan Ali</h4>
+                                        <span>E-commerce Manager</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SERVICES SECTION (Formerly About) -->
+            <section class="about-section" id="services">
+                <div class="section-header">
+                    <span class="eyebrow gradient-text">WHAT WE DO</span>
+                    <h2>AI-Powered Services<br>Tailored for You</h2>
+                    <p>From concept to deployment, we deliver end-to-end AI solutions that<br>drive measurable results.</p>
+                </div>
+        <div class="services-grid">
+                    <div class="service-card">
+                        <div class="card-icon-box">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                        </div>
+                        <h3>Custom AI Development</h3>
+                        <p>Bespoke machine learning models and AI systems engineered to solve your unique business challenges.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="card-icon-box">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                        </div>
+                        <h3>Intelligent Automation</h3>
+                        <p>Streamline operations with AI-driven workflows that eliminate repetitive tasks and boost productivity by up to 10x.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="card-icon-box">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+                        </div>
+                        <h3>AI Integration & APIs</h3>
+                        <p>Seamlessly integrate cutting-edge AI capabilities &mdash; GPT, vision, voice &mdash; into your existing tech stack.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="card-icon-box">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather"><polyline points="3 3 3 21 21 21"></polyline><polyline points="3 14 9 9 13 13 21 5"></polyline></svg>
+                        </div>
+                        <h3>Predictive Analytics</h3>
+                        <p>Turn your data into foresight. Our predictive models help you anticipate trends and make smarter decisions.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="card-icon-box">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                        </div>
+                        <h3>Computer Vision</h3>
+                        <p>From object detection to image generation, we build visual AI systems that see and understand your world.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="card-icon-box">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                        </div>
+                        <h3>AI Chatbots & Agents</h3>
+                        <p>Deploy conversational AI agents that handle customer support, sales, and internal queries &mdash; 24/7.</p>
+                    </div>
+                </div>
+        </section>
+
+            <!-- PROCESS SECTION (Effortless) -> Now serves as "About" -->
+            <section class="process-section" id="about">
+                <div class="process-content">
+                    <div class="process-left">
+                        <span class="eyebrow gradient-text">WHY EASY.AI</span>
+                        <h2>We Make AI<br>Effortless</h2>
+                        <p>Most agencies overcomplicate AI. We don't. Our team of researchers, engineers, and strategists work together to deliver solutions that are powerful yet intuitive &mdash; making artificial intelligence feel natural for your business.</p>
+                        <div class="stats-row">
+                            <div class="stat-item">
+                                <div class="stat-number gradient-text">99</div>
+                                <div class="stat-plus">+</div>
+                                <div class="stat-label">PROJECTS DELIVERED</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number gradient-text">98</div>
+                                <div class="stat-plus">%</div>
+                                <div class="stat-label">CLIENT RETENTION</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number gradient-text">40</div>
+                                <div class="stat-plus">+</div>
+                                <div class="stat-label">AI EXPERTS</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="process-right">
+                        <div class="process-card">
+                            <div class="process-number">01</div>
+                            <h3>Discovery & Strategy</h3>
+                            <p>We deep-dive into your business to identify where AI creates the most impact.</p>
+                        </div>
+                        <div class="process-card">
+                            <div class="process-number">02</div>
+                            <h3>Build & Train</h3>
+                            <p>Our engineers build and train custom models tailored to your data and goals.</p>
+                        </div>
+                        <div class="process-card">
+                            <div class="process-number">03</div>
+                            <h3>Deploy & Scale</h3>
+                            <p>We deploy production-ready AI and continuously optimise for peak performance.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SOLUTIONS SECTION -->
+            <section class="solutions-section" id="solutions">
+                <div class="section-header">
+                    <span class="eyebrow gradient-text">SOLUTIONS</span>
+                    <h2>Built for Every Industry</h2>
+                    <p>Our AI solutions power businesses across healthcare, finance, e-<br>commerce, logistics, and more.</p>
+                </div>
+                
+                <div class="marquee-container">
+                    <div class="marquee-content">
+                        <span>Business Intelligence</span>
+                        <span class="diamond">✦</span>
+                        <span>E-Commerce Automation</span>
+                        <span class="diamond">✦</span>
+                        <span>Supply Chain Optimization</span>
+                        <span class="diamond">✦</span>
+                        <span>Healthcare Analytics</span>
+                        <span class="diamond">✦</span>
+                        <span>Financial Modeling</span>
+                        <span class="diamond">✦</span>
+                        <!-- Duplicate set for seamless looping -->
+                        <span>Business Intelligence</span>
+                        <span class="diamond">✦</span>
+                        <span>E-Commerce Automation</span>
+                        <span class="diamond">✦</span>
+                        <span>Supply Chain Optimization</span>
+                        <span class="diamond">✦</span>
+                        <span>Healthcare Analytics</span>
+                        <span class="diamond">✦</span>
+                        <span>Financial Modeling</span>
+                        <span class="diamond">✦</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CONTACT SECTION -->
+            <section class="contact-section" id="contact">
+                <div class="section-header">
+                    <span class="eyebrow gradient-text">GET IN TOUCH</span>
+                    <h2>Let's Build the Future</h2>
+                    <p>Tell us about your project and we'll get back to you within 24 hours.</p>
+                </div>
+                <form class="contact-form" onsubmit="event.preventDefault();">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="john@company.com" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="5" placeholder="Describe your project or challenge..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-gradient">Send Message &rarr;</button>
+                </form>
+            </section>
+
+            <!-- CTA SECTION -->
+            <section class="cta-section">
+                <div class="cta-box">
+                    <h2>Ready to Automate Your Future?</h2>
+                    <p>Schedule a free discovery call with our AI architects and discover the untapped potential in your data.</p>
+                    <button class="btn btn-gradient">Start Your AI Journey</button>
+                </div>
+            </section>
+
+            <!-- CLIENTS SECTION -->
+            <section class="clients-section" id="clients">
+                <p class="clients-eyebrow">TRUSTED BY FORWARD-THINKING COMPANIES</p>
+                <div class="clients-logos">
+                    <span>TechCorp</span>
+                    <span>NexaVentures</span>
+                    <span>CloudPeak</span>
+                    <span>DataFlow</span>
+                    <span>MindBridge</span>
+                    <span>QuantumLeap</span>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="logo">easy<span class="logo-accent">.AI</span></div>
+                    <p>Pushing the boundaries of what's possible with artificial intelligence to build a smarter tomorrow.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="link-column">
+                        <h4>Company</h4>
+                        <a href="#">About Us</a>
+                        <a href="#">Careers</a>
+                        <a href="#">Contact</a>
+                    </div>
+                    <div class="link-column">
+                        <h4>Services</h4>
+                        <a href="#">Consulting</a>
+                        <a href="#">Development</a>
+                        <a href="#">Integration</a>
+                    </div>
+                    <div class="link-column">
+                        <h4>Legal</h4>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 easy.AI Solutions. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const counters = document.querySelectorAll('.stat-number');
+            
+            const animateCounters = (entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const counter = entry.target;
+                        const target = +counter.getAttribute('data-target');
+                        
+                        const updateCount = () => {
+                            const count = +counter.innerText;
+                            const inc = Math.max(1, target / 40); // Ensures it always increments
+
+                            if (count < target) {
+                                counter.innerText = Math.ceil(count + inc);
+                                setTimeout(updateCount, 30);
+                            } else {
+                                counter.innerText = target;
+                            }
+                        };
+
+                        updateCount();
+                        observer.unobserve(counter);
+                    }
+                });
+            };
+
+            const observer = new IntersectionObserver(animateCounters, {
+                threshold: 0.5
+            });
+
+            counters.forEach(counter => {
+                // Store the target number
+                counter.setAttribute('data-target', counter.innerText);
+                // Reset text to 0 before animating
+                counter.innerText = '0';
+                observer.observe(counter);
+            });
+        });
+    </script>
+    <script type="module">
+        import { Application } from 'https://esm.sh/@splinetool/runtime';
+
+        const canvas = document.getElementById('canvas3d');
+        const spline = new Application(canvas);
+        spline.load('https://prod.spline.design/Pr2nY8lwtzW2zCTJ/scene.splinecode')
+            .then(() => console.log('3D Robot Scene loaded successfully!'));
+    </script>
+</body>
+</html>
